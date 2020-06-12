@@ -3,7 +3,7 @@
 using namespace std;
 #define _CRT_SECURE_NO_WARNINGS
 
-Doctor::Doctor(string _name, string _surname, int _age, string _sex)
+Doctor::Doctor(string _name, string _surname, int _age, char _sex)
 	: Worker(_name, _surname, _age, _sex)
 {
    
@@ -22,6 +22,7 @@ void Doctor::set_salary()
 
 void Doctor::display()
 {
-    cout << "\n\nImie: " << name << "  Nazwisko: " << surname << "  Wiek: " << age << "  Plec: " << sex << "  Wylosowana pensja: " << salary <<  endl;
+    cout << endl;
+    cout << "Imie: " << name << "  Nazwisko: " << surname << "  Wiek: " << age << "  Plec: " << sex << "  Wylosowana pensja: " << salary <<  endl;
     cout << endl;
 }

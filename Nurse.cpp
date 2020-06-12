@@ -4,7 +4,7 @@
 using namespace std;
 #define _CRT_SECURE_NO_WARNINGS
 
-Nurse::Nurse(string _name, string _surname, int _age, string _sex)
+Nurse::Nurse(string _name, string _surname, int _age, char _sex)
     : Worker(_name, _surname, _age, _sex)
 {
     assigned_patients.reserve(2);
