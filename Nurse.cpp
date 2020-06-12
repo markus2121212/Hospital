@@ -21,7 +21,7 @@ void Nurse::set_salary()
 
 void Nurse::display()
 {
-    cout << "Imie: " << name << "  Nazwisko: " << surname << "  Wiek: " << age << "  Plec: " << sex << "  Wylosowana pensja: " << salary <<  endl;
+    cout << "Imie: " << name << "  Nazwisko: " << surname << "  Wiek: " << age << "  Plec: " << sex << "  Wylosowana pensja: " << salary << endl;
 }
 
 void Nurse::take_patient(Patient* _patient)
@@ -31,10 +31,10 @@ void Nurse::take_patient(Patient* _patient)
 
 int Nurse::how_patients()
 {
-    if(!assigned_patients.empty())
+    if (!assigned_patients.empty())
     {
         return assigned_patients.size();
-        
+
     }
     else {
         return 0;
@@ -55,3 +55,5 @@ void Nurse::get_name()
 {
     cout << name;
 }
+
+

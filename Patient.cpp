@@ -7,11 +7,11 @@ using namespace std;
 #define _CRT_SECURE_NO_WARNINGS
 
 Patient::Patient(string _name, string _surname, int _age, char _sex, int _health)
-	: Human(_name, _surname, _age, _sex)
+    : Human(_name, _surname, _age, _sex)
 {
     cout << "Losuje zdrowie" << endl;
     _health = (rand() % 100) + 1;
-    cout << "Wylosowane zdrowie: " << _health << endl<<endl;
+    cout << "Wylosowane zdrowie: " << _health << endl << endl;
     health = _health;
     assigned = 0;
 }

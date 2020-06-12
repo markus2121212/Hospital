@@ -16,5 +16,9 @@ public:
 	int how_patients();
 	void show_patients();
 	void get_name();
+	string get_name() const { return name; }
+	string get_surname() const { return surname; }
+	int get_age() const { return age; }
+	char get_sex() const { return sex; }
+	
 };
-

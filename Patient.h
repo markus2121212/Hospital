@@ -1,3 +1,4 @@
+
 #pragma once
 #include "Human.h"
 class Hospital;
@@ -13,4 +14,3 @@ public:
 	void set_assigned(bool _assigned);
 	bool get_assigned() const { return assigned; }
 };
-

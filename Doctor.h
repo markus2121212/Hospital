@@ -1,3 +1,4 @@
+
 #pragma once
 #include "Worker.h"
 
@@ -13,5 +14,3 @@ public:
 	int get_age() const { return age; }
 	char get_sex() const { return sex; }
 };
-
-

@@ -1,0 +1,2 @@
+Imie: Halszka  Nazwisko: Macyce  Wiek: 34  Plec: k
+Imie: Kuba  Nazwisko: Mapenis  Wiek: 32  Plec: m

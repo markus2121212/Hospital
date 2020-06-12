@@ -7,7 +7,7 @@ using namespace std;
 Human::Human(string _name, string _surname, int _age, char _sex)
 {
 
-	
+
 }
 
 void Human::set_name(string _name)
@@ -29,5 +29,3 @@ void Human::set_sex(char _sex)
 {
 	sex = _sex;
 }
-
-

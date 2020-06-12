@@ -7,7 +7,6 @@ protected:
 	int salary;
 public:
 	Worker(string _name, string _surname, int _age, char _sex);
-	virtual void set_salary()=0;
-	
-};
+	virtual void set_salary() = 0;
 
+};
