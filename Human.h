@@ -18,6 +18,7 @@ public:
 	void set_age(int _age);
 	void set_sex(char _sex);
 	virtual void display() = 0;
+	//virtual void save() = 0;
 };
 
 	

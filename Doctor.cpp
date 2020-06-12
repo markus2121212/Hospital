@@ -1,5 +1,9 @@
 #include "Doctor.h"
 #include <iostream>
+#include <fstream>
+#include <iterator>
+#include <string>
+#include <vector>
 using namespace std;
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -26,3 +30,5 @@ void Doctor::display()
     cout << "Imie: " << name << "  Nazwisko: " << surname << "  Wiek: " << age << "  Plec: " << sex << "  Wylosowana pensja: " << salary <<  endl;
     cout << endl;
 }
+
+

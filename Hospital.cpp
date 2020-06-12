@@ -4,6 +4,10 @@
 #include "Doctor.h"
 #include "Nurse.h"
 #include "Patient.h"
+#include <fstream>
+#include <iterator>
+#include <string>
+#include <vector>
 using namespace std;
 
 Hospital::Hospital()
@@ -204,6 +208,14 @@ void Hospital::go()
 					cout << endl;
 			}
 	}
+	ofstream outputfile("text.txt");
+	for (int i = 0; i < doctors.size(); i++)
+	{
+
+		outputfile << doctors[i].get_age() << "\n";
+		outputfile << doctors[i].get_name() << "\n";
+	}
+
 }
 
 void Hospital::generate_patients()
@@ -211,7 +223,7 @@ void Hospital::generate_patients()
 	string _name; string _surname; int _age; char _sex;
 
 	cout << "\nLosuje ilosc dzisiejszych pacjentow." << endl;
-	int i = (rand() % 5)+3;
+	int i = (rand() % 2)+1;
 	cout << "Wylosowana ilosc: " << i << endl;
 	
 	Human* ptr1;
