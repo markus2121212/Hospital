@@ -1,6 +1,7 @@
 
 #pragma once
 #include "Human.h"
+#include <vector>
 class Hospital;
 
 class Patient : public Human
@@ -13,4 +14,5 @@ public:
 	void display();
 	void set_assigned(bool _assigned);
 	bool get_assigned() const { return assigned; }
+	void save(vector <Patient>& _patient);
 };

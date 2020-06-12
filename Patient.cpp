@@ -3,6 +3,9 @@
 #include <cstdlib>
 #include <ctime>
 #include <time.h>
+#include <fstream>
+#include <vector>
+#include <string>
 using namespace std;
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -24,4 +27,14 @@ void Patient::display()
 void Patient::set_assigned(bool _assigned)
 {
     assigned = _assigned;
+}
+
+void Patient::save(vector<Patient>& _patient)
+{
+        ofstream outputfile("SpisPacjentow.txt");
+        for (unsigned int i = 0; i < _patient.size(); i++)
+        {
+            outputfile << "Imie: " << _patient[i].name << "  Nazwisko: " << _patient[i].surname << "  Wiek: " << _patient[i].age << "  Plec: " << _patient[i].sex <<" Zdrowie: "<< _patient[i].health<< endl;// endl;
+
+        }
 }

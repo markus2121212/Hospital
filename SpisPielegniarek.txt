@@ -1,0 +1,3 @@
+Imie: djhas  Nazwisko: 1  Wiek: 32  Plec: k
+Imie: fsdghj  Nazwisko: 2  Wiek: 687  Plec: m
+Imie: hdj  Nazwisko: 3  Wiek: 67  Plec: k

@@ -12,8 +12,9 @@
 int main()
 {
     srand((unsigned int)time(NULL));
-    std::cout << "Hello World!\n";
-    Hospital hospital;
-    hospital.go();
+   
+        Hospital hospital;
+        hospital.go();
+    
 }
 

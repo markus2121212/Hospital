@@ -1,0 +1,2 @@
+Imie: 1  Nazwisko: 1  Wiek: 1  Plec: k
+Imie: 2  Nazwisko: 2  Wiek: 2  Plec: m

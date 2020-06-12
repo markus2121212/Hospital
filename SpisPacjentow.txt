@@ -1,0 +1,6 @@
+Imie: jhsdf  Nazwisko: 1  Wiek: 7398  Plec: k Zdrowie: 92
+Imie: hfjusd  Nazwisko: 2  Wiek: 67  Plec: m Zdrowie: 41
+Imie: gdy  Nazwisko: 3  Wiek: 87  Plec: m Zdrowie: 78
+Imie: hdjfs  Nazwisko: 4  Wiek: 67  Plec: k Zdrowie: 88
+Imie: jhaskd  Nazwisko: 5  Wiek: 678  Plec: k Zdrowie: 50
+Imie: jfdh  Nazwisko: 6  Wiek: 89  Plec: m Zdrowie: 5

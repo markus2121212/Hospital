@@ -1,0 +1,2 @@
+Imie: hal  Nazwisko: cie  Wiek: 67  Plec: k
+Imie: jak  Nazwisko: mar  Wiek: 7  Plec: m

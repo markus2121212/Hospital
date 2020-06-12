@@ -1,6 +1,9 @@
 #include "Nurse.h"
 #include <iostream>
 #include <cstdlib>
+#include <fstream>
+#include <iterator>
+#include <string>
 using namespace std;
 #define _CRT_SECURE_NO_WARNINGS
 
@@ -54,6 +57,18 @@ void Nurse::show_patients()
 void Nurse::get_name()
 {
     cout << name;
+}
+
+void Nurse::save(vector<Nurse> &_nurses)
+{
+    ofstream outputfile("SpisPielegniarek.txt");
+    for (unsigned int i = 0; i < _nurses.size(); i++)
+    {
+        outputfile << "Imie: " << _nurses[i].name << "  Nazwisko: " << _nurses[i].surname << "  Wiek: " << _nurses[i].age << "  Plec: " << _nurses[i].sex << endl;// endl;
+        
+    }
+    
+    
 }
 
 
