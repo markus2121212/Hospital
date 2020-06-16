@@ -142,6 +142,7 @@ void Hospital::go()
 		cout << "Czy chcesz kontynuowac?" << endl << "1. Tak" << endl << "2. Nie" << endl;
 		symulation = secured_Cin();
 		int size_of_patients_before_generate; 
+		int stop = 0;
 		switch (symulation)
 		{
 		case 1:
@@ -150,11 +151,13 @@ void Hospital::go()
 			size_of_patients_before_generate = patients.size();
 			generate_patients();
 			how_generated_patients = patients.size();
-			patients[0].save(patients);
+			
 
 				cout << endl << endl;
-				for (unsigned int j = size_of_patients_before_generate; j < how_generated_patients; j++)
+				for (unsigned int j = size_of_patients_before_generate; j < patients.size(); j++)
 				{
+					if (stop == 1) break;
+					
 					cout << "Pacjenci do przypisania: " << endl;
 					for (unsigned int i = 0; i < patients.size(); i++)
 					{
@@ -180,20 +183,10 @@ void Hospital::go()
 					}
 					if (how_many_nurses == 0)
 					{
+						
 						int choice = 0;
-						cout << "Brak dostepnych pielegniarek! Odeslij pacjenta lub zatrudnij nowa." << endl << "1. Odeslij pacjenta." << endl << "2. Zatrudnij pielegniarke i automatycznie przypisz do niej pacjenta." << endl;
-						while (choice == 0)
-						{
-							choice = secured_Cin();
-							switch (choice)
-							{
-							case 1:
-								for (int i = 0; i < how_generated_patients; i++)
-								{
-									patients.pop_back();
-								}
-								break;
-							case 2:
+						cout << "Brak dostepnych pielegniarek!" << endl << "Zatrudnij pielegniarke i automatycznie przypisz do niej pacjenta." << endl;
+
 								cout << "Wprowadz dane nowej pielegniarki: " << endl;
 								nurses.emplace_back("Anna", "Bednorz", 23, 'k');
 								ptr = &nurses.back();
@@ -245,8 +238,7 @@ void Hospital::go()
 								nurses[nurses.size() - 1].show_patients();
 								cout << endl;
 								nurses[0].save(nurses);
-							}
-						}
+							
 					}
 					else
 					{
@@ -261,6 +253,37 @@ void Hospital::go()
 						cout << endl;
 					}
 				}
+				
+				for (unsigned int l = 0; l < patients.size()-1; l++) {
+					int health_switch = (rand() % 3);
+
+					if (patients[l].get_health() <= 0)
+					{
+						cout << endl << "PACJENT NUMER: " << l + 1 << " ZMARL" << endl;
+					}
+					else if (patients[l].get_health() >= 100)
+					{
+						cout << endl << "PACJENT NUMER: " << l+1 << " WYZDROWIAL" << endl;
+					}
+					else {
+						if (health_switch == 0)
+						{
+							patients[l].set_health(patients[l].get_health() - 10);
+
+						}
+						else
+						{
+							patients[l].set_health(patients[l].get_health() + 10);
+						}
+					}
+				}
+
+
+				//tu byloby wypisywanie pacjentow z pliku, ale nie zdazylem
+
+				patients[0].save(patients);
+				
+
 			
 			break;
 		case 2:

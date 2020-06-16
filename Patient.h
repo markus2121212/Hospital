@@ -15,4 +15,6 @@ public:
 	void set_assigned(bool _assigned);
 	bool get_assigned() const { return assigned; }
 	void save(vector <Patient>& _patient);
+	int get_health() const { return health; }
+	void set_health(int _health) { health = _health; };
 };
